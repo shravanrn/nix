@@ -130,11 +130,11 @@ mod sched_linux_like {
         Errno::result(res).map(drop)
     }
 
-    pub fn setns(fd: RawFd, nstype: CloneFlags) -> Result<()> {
-        let res = unsafe { libc::setns(fd, nstype.bits()) };
+    // pub fn setns(fd: RawFd, nstype: CloneFlags) -> Result<()> {
+    //     let res = unsafe { libc::setns(fd, nstype.bits()) };
 
-        Errno::result(res).map(drop)
-    }
+    //     Errno::result(res).map(drop)
+    // }
 }
 
 /// Explicitly yield the processor to other threads.
