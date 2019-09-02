@@ -8,7 +8,7 @@
 // latest bitflags triggers a rustc bug with cross-crate macro expansions causing dead_code
 // warnings even though the macro expands into something with allow(dead_code)
 #![allow(dead_code)]
-#![cfg_attr(test, deny(warnings))]
+// #![cfg_attr(test, deny(warnings))]
 #![recursion_limit = "500"]
 #![deny(unused)]
 #![deny(unstable_features)]

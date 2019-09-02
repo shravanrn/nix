@@ -1,5 +1,5 @@
 use std::mem;
-use std::os::unix::io::RawFd;
+// use std::os::unix::io::RawFd;
 use std::option::Option;
 use libc::{self, c_int, c_void};
 use {Error, Result};
@@ -114,8 +114,8 @@ pub fn unshare(flags: CloneFlags) -> Result<()> {
     Errno::result(res).map(drop)
 }
 
-pub fn setns(fd: RawFd, nstype: CloneFlags) -> Result<()> {
-    let res = unsafe { libc::setns(fd, nstype.bits()) };
+// pub fn setns(fd: RawFd, nstype: CloneFlags) -> Result<()> {
+//     let res = unsafe { libc::setns(fd, nstype.bits()) };
 
-    Errno::result(res).map(drop)
-}
+//     Errno::result(res).map(drop)
+// }
